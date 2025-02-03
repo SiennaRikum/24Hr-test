@@ -1,0 +1,147 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Story Container */
+.story-container {
+  width: 100%;
+  max-width: 1080px; /* Limiting max width for mobile devices */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Global Progress Bar */
+.global-progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0e0; /* Light grey background for the entire progress bar */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50; /* Green for the filled progress */
+}
+
+.segments {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.segment {
+  width: 50%; /* Each segment takes up 10% of the progress bar */
+  background-color: #e0e0e0; /* Grey for unfilled segments */
+  transition: background-color 0.3s;
+}
+
+.segment.filled {
+  background-color: #4caf50; /* Green for filled segments */
+}
+
+/* Story Viewer */
+.story-viewer {
+  position: relative;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 1080px;
+  max-height: 1920px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.story-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.story-controls button {
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.story-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Thumbnail List */
+.story-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.story-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.story-thumbnail:hover {
+  opacity: 0.7;
+}
+
+/* Button Styles */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+/* Progress Bar Container */
+.progress-bar-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0e0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 1s linear;
+}
